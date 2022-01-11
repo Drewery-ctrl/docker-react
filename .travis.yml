@@ -16,13 +16,12 @@ deploy:
   env: "Dockerreact-env"
   bucket_name: "elasticbeanstalk-us-east-1-943490506324"
   bucket_path: "docker-react"
-  version_label: "v$TRAVIS_BUILD_NUMBER"
-  description: "Deployment of Docker React $TRAVIS_BUILD_NUMBER"
+  on:
+    branch: master
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
-  on:
-    branch: master
+
 
 
 
